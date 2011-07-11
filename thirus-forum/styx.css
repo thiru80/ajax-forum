@@ -1,0 +1,453 @@
+body
+{
+ margin:0;
+ font-family:verdana,sans-serif;
+ background-color:#3d3d3d;
+ text-align:center;
+ 
+ }
+#cz
+{
+
+ width:950px;
+ background-color:#FFFFFF;
+ display:table;
+ margin:0 auto; 
+ 
+
+
+}
+
+#header
+{
+ background-color:#c2a0ff;
+ height:90px;
+ color:#ffffff;
+ 
+
+
+}
+#cont
+{
+   background-color:#ffffff;
+   
+
+}
+#footer
+{
+
+
+
+}
+
+#h
+{
+margin-top:-65px;
+margin-left:80px;
+font-family:ubuntu,verdana,sans-serif;
+letter-spacing:5px;
+font-size:3.5em;
+}
+#linkx
+{
+float:right;
+margin-top:-63px;
+margin-right:30px;
+
+ }
+#linkx li
+{
+ list-style-type:none;
+ float:left;
+ padding:8px;
+}
+#linkx a
+{
+ text-decoration:none;
+ color:#ffffff;
+ font-size:16px;
+
+}
+#linkx a:hover
+{
+ color:black;
+}
+#logbox
+{
+
+
+padding:13px;
+ 
+
+
+
+}
+#rightx
+{
+background-color:#ffffff;
+float:right;
+
+border-left:1px solid #c2a0ff;
+border-right:1px solid #c2a0ff;
+border-bottom:1px solid #c2a0ff;
+width:228px;
+margin-right:20px;
+margin-top:20px;
+margin-bottom:20px;
+
+}
+#leftx
+{float:left;
+ margin-top:20px;
+ margin-left:20px;
+ width:660px;
+ background-color:#ffffff;
+ margin-bottom:500px;
+
+ 
+
+
+}
+#inx
+{
+padding:10px;
+
+margin-left:100px;
+
+
+}
+#datax
+{
+ height:100px;
+}
+#h2
+{margin-left:-1px;
+ background-color:#c2a0ff;
+ height:27px;
+ width:230px;
+
+
+
+}
+#h3
+{
+ 
+ background-color:#c2a0ff;
+ height:24px;
+
+
+
+}
+.lt
+{
+
+color:#ffffff;
+padding:5px;
+font-size:90%;
+
+
+
+}
+
+
+#logbox td
+{ font-size:16px;
+ color:#9057f9;
+
+}
+#logbox a
+{
+  color:#9057f9;
+  text-decoration:none;
+  font-size:13px;
+
+}
+#logbox a:hover
+{
+ text-decoration:underline;
+
+}
+#tablex
+{
+ 
+  width:662px;
+  border-collapse:separate;
+  border-spacing:2px;
+
+  
+
+
+}
+
+
+#tablex td
+{
+padding:5px;
+ border:1px solid #c2a0ff;
+ text-align:center;
+ font-size:90%;
+}
+#tablex td a
+{
+ text-decoration:none;
+}
+#tablex a:hover
+{
+ text-decoration:underline;
+}
+#tablex2
+{
+ width:908px;
+ border-collapse:separate;
+ border-spacing:3px;
+}
+#tablex2 td
+{
+ 
+ background-color:#ffffff;
+ padding:10px;
+ 
+
+}
+
+
+#tr1x td
+{
+background-color:#c2a0ff;
+color:#ffffff;
+text-align:center;
+font-size:90%;
+
+
+
+}
+#r12
+{border:1px solid #c2a0ff;
+}
+
+#threadx
+{
+ border:1px solid #c2a0ff;
+ 
+ margin-left:2px;
+ margin-top:5px;
+ background-color:#ffffff;
+margin-bottom:20px;
+}
+#cthreadx
+{
+padding:5px;
+
+
+}
+#cthreadx td
+{
+padding:5px;
+}
+#ct1
+{ color:#9057f9;
+ padding:5px;
+ border:1px solid #c2a0ff;
+ margin-top:5px;
+ margin-left:2px;
+ 
+ background-color:#ffffff;
+ margin-bottom:30px;
+
+}
+
+#td3x
+{
+ text-align:left;
+}
+#td4x
+{
+text-align:right;font-size:77%;
+}
+#r13
+{
+ border:1px solid #c2a0ff;
+ background-color:#e5e5e5;
+
+}
+#inx2
+{
+
+ background-color:#e5e5e5;
+}
+
+.ix
+{
+font-size:130%;
+padding-right:10px;
+
+}
+.iy
+{
+padding-top:10px;
+font-size:75%;
+
+}
+#ct1 a
+{
+  color:#9057f9;
+
+}
+.sd2
+{font-size:72%;
+ background-color:#e5e5e5;
+ padding:10px;
+ margin-top:150px;
+
+ 
+}
+
+.sd3
+{
+
+font-size:72%;
+ background-color:#e5e5e5;
+ padding:10px;
+
+
+}
+#ipost
+{
+margin-top:4px;
+width:907px;
+
+}
+#ipost a
+{
+
+text-decoration:none;
+
+
+}
+#ipost a:hover
+{
+text-decoration:underline;
+
+
+}
+#centx
+{
+ margin-top:20px;
+ margin-left:auto;
+ margin-right:auto;
+ width:660px;
+ background-color:#ffffff;
+
+
+}
+.lt7
+{
+font-size:110%;
+
+}
+#conpx
+{
+ padding:20px;
+
+ 
+
+
+
+}
+#conpx2
+{
+ border:1px solid #c2a0ff;
+ margin-left:auto;
+ margin-right:auto;
+ width:50%;
+ padding:20px;
+ height:450px;
+ padding-bottom:100px;
+
+}
+.tab4
+{ font-size:80%;
+  padding-top:5px;
+ 
+}
+.yut
+{
+font-size:70%;
+color:red;
+}
+#xcv
+{
+ 
+ padding:20px;
+
+
+}
+.tab7
+{ height:30px;
+  text-align:right;
+
+}
+.iz
+{
+padding-top:10px;
+float:right;
+font-size:75%;
+
+}
+.zax
+{
+
+font-size:70%;
+}
+.iz span
+{
+ text-decoration:none;
+ cursor:pointer;
+ 
+
+}
+.iz span:hover
+{
+ text-decoration:underline;
+
+}
+.tabv
+{
+ width:100%;
+ margin-bottom:20px;
+ 
+ 
+ 
+}
+.yif
+{
+ color:#9057f9;
+ font-size:110%;
+ padding-bottom:20px;
+ padding-top:20px;
+}
+
+.der
+{ font-size:80%;
+ text-decoration:none;
+ cursor:pointer;
+ color:blue;
+ padding-left:5px;
+}
+
+.der:hover
+{
+  text-decoration:underline;
+}
+
+
+.inv
+{
+display:none;
+
+}
+.cj
+{
+font-size:110%;
+color:#777;
+}
