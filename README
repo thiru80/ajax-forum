@@ -1,5 +1,5 @@
 project:ajax-forum
-project description:project is a ajax based forum which inserts threads and replies without refreshing.
+project description:project is an ajax based forum which inserts threads and replies without refreshing.
 homepage:index.php
 database dump:thirux.sql
 project uses jquery which is provided in folder
