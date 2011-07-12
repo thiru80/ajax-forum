@@ -39,7 +39,8 @@ $xparent=$_GET["xs"];
                                   ";   }
                          else
                            {
-                          echo  "<li><a href='logout.php'> logout </a></li>";   
+                          echo  "<li><a href='logout.php'> logout </a></li>";
+                          echo "<li><a href='prox.php?xf=".$_SESSION["usrx"]."'>".$_SESSION["usrx"]."</a></li>";   
                                       }
                          ?>
                      

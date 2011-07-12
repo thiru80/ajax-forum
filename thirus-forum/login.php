@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_POST["usr"]))
 {
-$con=mysql_connect("localhost","root","");
+$con=mysql_connect("localhost","root","") or die(mysql_error());
 mysql_select_db("thiru");
   $x1=$_REQUEST["usr"];
    $x2=$_REQUEST["pass"];
