@@ -169,7 +169,7 @@ $views=$vs["views"];
 
 
 
-              $sq31="SELECT joindate FROM userx WHERE username='{$usx5}';";
+              $sq31="SELECT joindate,picture FROM userx WHERE username='{$usx5}';";
               $count31=mysql_query($sq31,$con2) or die(mysql_error());
            
               $count39=mysql_fetch_array($count31);
@@ -177,6 +177,7 @@ $views=$vs["views"];
               $count32=mysql_query($sq32,$con2) or die(mysql_error());
               $count40=mysql_fetch_array($count32);
                     echo "<span class='lt7'>$usx5</span><br><br>
+                         <div id='picx' style='text-align:center;'>  <img src='".$count39["picture"]."' height='100' width='120'>  </div>
                          <div class='sd3'>  
                         <strong>no.posts : </strong>".$count40["pox"]."<br> 
                         <strong>joined : </strong>".$count39["joindate"]."<br>

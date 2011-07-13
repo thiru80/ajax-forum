@@ -6,7 +6,7 @@ $content=$_GET["contentx"];
 $author=$_SESSION["usrx"];
 $time=date("H:i:s");
 $day=date("Y-m-d");
-$con=mysql_connect("localhost","root","");
+$con=mysql_connect("localhost","root","") or die(mysql_error());
 mysql_select_db("thiru");
 $sq="SELECT MAX(post_id) AS xc FROM postx;";
 $re1=mysql_query($sq,$con);
@@ -41,6 +41,7 @@ mysql_query($sq2,$con);
               <tr>
                                 <td width='26%' valign='top'>
                                <h3> <a href='prox.php?xf=".$author."'>".$author."</a></h3>
+                          <div id='picx' style='text-align:center;'>   <img src='".$count39["picture"]."' height='100' width='120'> </div>
                           <div class='sd2'> 
                        <strong>no.posts : </strong>".$count40["pox"]."<br>
                        <strong>joined : </strong>".$count39["joindate"]."<br>

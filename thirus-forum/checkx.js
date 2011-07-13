@@ -408,3 +408,27 @@ if(chex==0)
 }
 
 
+
+
+function ext2()
+{
+
+$("#pico").css("display","none");
+$("#uploax").css("display","block");
+
+
+}
+
+function ext3()
+{
+$("#mesx").text("");
+$("#pico").css("display","block");
+$("#uploax").css("display","none");
+
+
+
+}
+
+
+
+

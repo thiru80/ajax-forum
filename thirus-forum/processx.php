@@ -6,7 +6,7 @@ $content=$_GET["contentx"];
 $author=$_SESSION["usrx"];
 $time=date("H:i:s");
 $day=date("Y-m-d");
-$con=mysql_connect("localhost","root","");
+$con=mysql_connect("localhost","root","") or die(mysql_error());
 mysql_select_db("thiru");
 $sq="SELECT MAX(post_id) AS mp FROM postx;";
 

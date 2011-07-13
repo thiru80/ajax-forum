@@ -71,8 +71,39 @@ $proname=$_GET["xf"];
                             if($_SESSION["usrx"]==$proname)
                                {
 
-                   echo   "<span class='yif'>username</span> : <span class='ix'>".$count72["username"]."</span><hr>     
-                               <span class='yif'>about ".$count72["username"]."</span>
+                   echo   "
+                         <span id='pico'>
+                             <img src='".$count72["picture"]."' height='100' width='120'>
+                             <span class='der' id='edy' onclick=ext2()> edit</span><br>
+                              <span id='mesx' class='yut'> ";
+                             
+                             if(isset($_SESSION["psizex"]))
+                           { 
+                               if($_SESSION["psizex"]==50)
+                                 { echo "file not uploaded";
+                              
+                                      $_SESSION["psizex"]=0;
+                                  }
+
+                            }
+               echo       "
+                          
+                  </span> </span>
+                            <span id='uploax'>
+                               <form action='process5x.php' method='post' enctype='multipart/form-data'>
+                       choose picture<br>
+                       <input type='file' name='file' id='file'>
+                               <input type='submit' value='Submit'>
+                               <input type='button' value='cancel' onclick='ext3()'>
+                                </form>
+                          </span>
+                          
+                     <br><span class='yif'>username</span> : <span class='ix'>".$count72["username"]."</span>
+                          
+
+
+                    <br>             
+                            <br><span class='yif'>about ".$count72["username"]."</span>
                               <table class='tabv'>
                               <tr><td class='tab4'><span class='cj'>name  </span><div id='n1'>
                               <span id='y1'> ".$count72["name"]." </span> <span class='der' onclick=disp('#n1','#m1')> edit</span>
@@ -330,7 +361,13 @@ $proname=$_GET["xf"];
                        
                       if($pol==10)
                         {
-                       echo   "<span class='yif'>username</span> : <span class='ix'>".$count72["username"]."</span><hr>     
+                       echo   "<span id='pico'><img src='".$count72["picture"]."' height='100' width='100'></span>
+                     <br><span class='yif'>username</span> : <span class='ix'>".$count72["username"]."</span>
+                          
+
+
+                    <br>             
+                            <br>    
                                <span class='yif'>about ".$count72["username"]."</span>
                               <table class='tabv'>
                               <tr><td class='tab4'><span class='cj'>name  </span><br>".$count72["name"]."</td></tr>

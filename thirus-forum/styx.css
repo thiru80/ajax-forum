@@ -297,7 +297,7 @@ font-size:75%;
 {font-size:72%;
  background-color:#e5e5e5;
  padding:10px;
- margin-top:150px;
+ margin-top:20px;
 
  
 }
@@ -361,7 +361,7 @@ font-size:110%;
  margin-right:auto;
  width:50%;
  padding:20px;
- height:450px;
+
  padding-bottom:100px;
 
 }
@@ -449,5 +449,22 @@ display:none;
 .cj
 {
 font-size:110%;
-color:#777;
+color:#777777;
 }
+#picx
+{
+margin-bottom:20px;
+
+}
+#pico
+{
+float:right;
+
+
+}
+#uploax
+{
+display:none;
+
+}
+

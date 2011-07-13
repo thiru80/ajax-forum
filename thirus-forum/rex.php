@@ -69,7 +69,7 @@ $xparent=$_GET["xs"];
                {
 
                $ed=$row['username'];
-              $sq31="SELECT joindate,last FROM userx WHERE username='{$ed}';";
+              $sq31="SELECT joindate,last,picture FROM userx WHERE username='{$ed}';";
               $count31=mysql_query($sq31,$conz) or die(mysql_error());
            
               $count39=mysql_fetch_array($count31);
@@ -83,6 +83,7 @@ $xparent=$_GET["xs"];
  <table id='tablex2'>              <tr>
                             <td  valign='top'>
                                <h3> <a href='prox.php?xf=".$row['username']."'>".$row['username']."</a></h3>
+                           <div id='picx' style='text-align:center;'>  <img src='".$count39["picture"]."' height='100' width='120'>  </div>
                           <div class='sd2'>  
                         <strong>no.posts : </strong>".$count40["pox"]."<br> 
                         <strong>joined : </strong>".$count39["joindate"]."<br>
