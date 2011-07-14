@@ -86,6 +86,16 @@ $proname=$_GET["xf"];
                               
                                       $_SESSION["psizex"]=0;
                                   }
+                              if($_SESSION["psizex"]==100)
+                                 { echo "file size too high";
+                              
+                                      $_SESSION["psizex"]=0;
+                                  }
+                               if($_SESSION["psizex"]==150)
+                                 { echo "upload only jpeg,png,gif";
+                              
+                                      $_SESSION["psizex"]=0;
+                                  }
 
                             }
                echo       "
