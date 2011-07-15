@@ -255,6 +255,7 @@ $views=$vs["views"];
         
          </div>
                  <div id="footer">
+                     thiru's forum
              
                  </div>
     

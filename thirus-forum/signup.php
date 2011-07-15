@@ -263,7 +263,8 @@ session_start();
                  </div>
             
          </div>
-                 <div id="footer">
+                 <div id="footer2">
+                  thiru's forum
                  </div>
           </div>
 

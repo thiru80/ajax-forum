@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$title=$_GET["titlex"];
-$content=$_GET["contentx"];
+$title=$_POST["titlex"];
+$content=$_POST["contentx"];
 $author=$_SESSION["usrx"];
 $time=date("H:i:s");
 $day=date("Y-m-d");

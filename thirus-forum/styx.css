@@ -35,8 +35,22 @@ body
 }
 #footer
 {
+ color:#777777;
+ text-align:center;
+ width:900px;
+ display:table;
+ padding:20px;
 
 
+}
+#footer2
+{
+color:#777777;
+ text-align:center;
+ width:900px;
+ display:table;
+ padding:20px;
+ margin-top:400px;
 
 }
 

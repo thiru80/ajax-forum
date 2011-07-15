@@ -408,7 +408,9 @@ $proname=$_GET["xf"];
                   ?>
                  </div>
             </div>
-
+                   <div id="footer2">
+                  thiru's forum
+                 </div>
            <div>
 
 

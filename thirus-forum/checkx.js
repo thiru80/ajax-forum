@@ -27,7 +27,7 @@
                  $.ajax({
                      url:"processx.php",
                      data:dat,
-                    type:"GET",
+                    type:"POST",
                     success:function(dax)
                      { $("#tablex").append(dax);
                      }
@@ -64,7 +64,7 @@
               {   $.ajax({
                      url:"process2x.php",
                      data:dat,
-                    type:"GET",
+                    type:"POST",
                     success:function(dax)
                      { $("#inz").append(dax);
                      
@@ -84,7 +84,7 @@
                    $.ajax({
                         url:"process3x.php",
                         data:datz,
-                        type:"GET",
+                        type:"POST",
                         success:function(yaz)
                            {
                               $("#za"+dasx).text(yaz);

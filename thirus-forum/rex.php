@@ -175,6 +175,7 @@ $xparent=$_GET["xs"];
                  
          </div>
                  <div id="footer">
+             thiru's forum
                  </div>
           </div>
 

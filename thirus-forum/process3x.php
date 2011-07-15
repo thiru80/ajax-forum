@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$postid1=$_GET["postq"];
-$checsx=$_GET["stat"];
+$postid1=$_POST["postq"];
+$checsx=$_POST["stat"];
 $conx=mysql_connect("localhost","root","") or die(mysql_error());
 mysql_select_db("thiru");
 if($checsx==100)
