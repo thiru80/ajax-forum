@@ -429,6 +429,42 @@ $("#uploax").css("display","none");
 
 }
 
+function chanp()
+{
+  var vx=0;
 
+ if(scheck())
+     vx=vx+1;
+ if(scheck2())
+     vx=vx+1;
+if(vx==0)
+{
+
+var oldx=$("#oldpassx").val();
+var pasx=$("#spassx").val();
+var dacx="oldx="+oldx+"&pasx="+pasx;
+$.ajax({
+  url:"process6x.php",
+  type:"POST",
+  data:dacx,
+  success:function(dase)
+        { 
+      $("#changf").html(dase);       
+
+
+
+     }
+
+
+});
+
+}
+
+
+
+
+
+
+}
 
 
