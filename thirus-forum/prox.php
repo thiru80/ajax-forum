@@ -348,6 +348,7 @@ $proname=$_GET["xf"];
                                                <input type='button' value='cancel' onclick=canu('#n7','#m7')>                                        
                                                                        </span>
                             </td><td id='q7' class='yut'></td></tr>
+                             <tr><td class='tab4'><a href='changep.php'>change password</a></td></tr>
                               </table>
                               <span class='yif'>statistics</span>
                               <table class='tabv'>
