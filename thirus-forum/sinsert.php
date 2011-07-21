@@ -17,6 +17,7 @@ $sw="INSERT INTO userx(username,gender,name,birthday,occupation,interest,locatio
 VALUES('{$y1}','{$y3}','N/A','{$y8}','N/A','N/A','N/A','{$y2}','na.jpeg','{$y9}','{$y11}');";
 mysql_query($sa,$con) or die(mysql_error());
 mysql_query($sw,$con) or die(mysql_error());
+$_SESSION["x99"]=99;
 
 
 header("location:index.php");

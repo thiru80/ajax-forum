@@ -201,6 +201,17 @@ $views=$vs["views"];
               else
                  { 
                      echo "<table>";
+                    if(isset($_SESSION["x99"]))
+                     {
+                       if($_SESSION["x99"]==99)
+                           echo " 
+                     <tr><td  style='color:green'>account created! </td></tr>
+                     <tr><td style='color:green'>login now!</td></tr>";
+                       $_SESSION["x99"]=400;
+
+
+
+                     }
 
                     if(isset($_SESSION["x0"]))
                     { if($_SESSION["x0"]==90)
