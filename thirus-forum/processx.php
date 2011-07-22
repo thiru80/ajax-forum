@@ -28,7 +28,7 @@ $x9=$x9+1;
 
 $postid=$x9;
 $parentid=$x9;
-$sq2="INSERT INTO postx VALUES('{$postid}','{$parentid}','{$author}','{$title}','{$content}','{$time}','{$day}','0','0');";
+$sq2="INSERT INTO postx VALUES('{$postid}','{$parentid}','{$author}','{$title}','{$content}','{$time}','{$day}');";
 
 mysql_query($sq2,$con);
 $sq3="SELECT count(*) FROM postx WHERE parent_id='{$parentid}' AND parent_id<>post_id;";
