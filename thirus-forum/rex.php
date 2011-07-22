@@ -90,14 +90,7 @@ $xparent=$_GET["xs"];
                         <strong>no.posts : </strong>".$count40["pox"]."<br> 
                         <strong>joined : </strong>".$count39["joindate"]."<br>
                         <strong>last visit </strong>: ";
-            
-            $sq2="SELECT count(*) AS numy FROM likex WHERE stat='1' AND post_id=".$row["post_id"].";";
-            $sq3="SELECT count(*) AS numo FROM likex WHERE stat='0' AND post_id=".$row["post_id"].";";
-            $count43=mysql_query($sq2,$conz) or die(mysql_error());
-            $count44=mysql_query($sq3,$conz) or die(mysql_error());
-            $res90=mysql_fetch_array($count43);
-            $res91=mysql_fetch_array($count44);
-           
+         
                  if(isset($_SESSION["usrx"]))      
                    {
                   if($_SESSION["usrx"]==$row["username"])      
@@ -111,23 +104,17 @@ $xparent=$_GET["xs"];
           { echo  substr($count39["last"],0,-3);}
                    echo"   </div>      </td>
                                 <td valign='top' width='74%'>
-                                <span class='ix'>".$row['title']."</span><span class='iy'>".substr($row['time'],0,5)." ,".$row['date']." </span>";
-                        
-                if(isset($_SESSION["usrx"]))
-                       {    
-                      echo "
-             
+                                <span class='ix'>".$row['title']."</span><span class='iy'>".substr($row['time'],0,5)." ,".$row['date']." </span>
+                            
+
+
                            <div class='iz'>
                              <span onclick='zpost(".$row["post_id"].",100)' style='color:green;'>
                                      like</span> | <span onclick='zpost(".$row["post_id"].",500)' style='color:red;'>
                                      dislike</span>
-                           </div> ";
-
-                      }
-
-                 echo "
+                           </div>
                                     <br>
-                                  <div id='za".$row["post_id"]."' class='zax'>".$res90["numy"]." likes ".$res91["numo"]." dislikes</div>
+                                  <div id='za".$row["post_id"]."' class='zax'>".$row["likes"]." likes ".$row["dislikes"]." dislikes</div>
                                      <hr>
                                      ".$row['content']."
                                 </td> </tr>

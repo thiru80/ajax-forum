@@ -80,17 +80,8 @@
 
 
             function zpost(dasx,xad)
-             {     
-                 var datz="postq="+dasx+"&stat="+xad;   
-                  var dae="posty="+dasx;
-                  $.ajax({
-                        url:"process7x.php",
-                        data:dae,
-                        type:"POST",
-                        success:function(yaz)
-                           {
-                              if(yaz==1)
-                               {    $.ajax({
+             {     var datz="postq="+dasx+"&stat="+xad;
+                   $.ajax({
                         url:"process3x.php",
                         data:datz,
                         type:"POST",
@@ -101,17 +92,10 @@
                             }
 
 
-                        }); 
+                        });
+                 
 
-                               
-                                }
-                                  else
-           
-             $("#za"+dasx).text("you have already given like/dislike");
-                            
-                            }
-                       });
-       
+
 
              }
 

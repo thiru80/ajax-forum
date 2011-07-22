@@ -23,7 +23,7 @@ $rodj=mysql_fetch_array($re1);
 $x9=$x9+1;
 $postid=$x9;
 $parentid=$_SESSION["xparent1"];
-$sq2="INSERT INTO postx VALUES('{$postid}','{$parentid}','{$author}','{$title}','{$content}','{$time}','{$day}');";
+$sq2="INSERT INTO postx VALUES('{$postid}','{$parentid}','{$author}','{$title}','{$content}','{$time}','{$day}','0','0');";
 mysql_query($sq2,$con);
    
                         
