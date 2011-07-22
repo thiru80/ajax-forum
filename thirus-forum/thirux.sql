@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 13, 2011 at 04:48 PM
+-- Generation Time: Jul 22, 2011 at 10:44 PM
 -- Server version: 5.1.54
 -- PHP Version: 5.3.5-1ubuntu7.2
 
@@ -28,7 +28,7 @@ USE `thiru`;
 --
 
 CREATE TABLE IF NOT EXISTS `info` (
-  `username` text NOT NULL,
+  `username` varchar(30) NOT NULL,
   `password` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -37,8 +37,28 @@ CREATE TABLE IF NOT EXISTS `info` (
 --
 
 INSERT INTO `info` (`username`, `password`) VALUES
-('x', '*B69027D44F6E5EDC07F1AEAD1477967B16F28227'),
+('x', '*4661D72F443CFC758BECA246B5FA89525BF23E91'),
 ('s', '*16863C23B2E91537AEAEDDE9D1B40DA2A975C5DC');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `likex`
+--
+
+CREATE TABLE IF NOT EXISTS `likex` (
+  `username` varchar(30) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `stat` int(2) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `likex`
+--
+
+INSERT INTO `likex` (`username`, `post_id`, `stat`) VALUES
+('x', 6, 1),
+('x', 9, 1);
 
 -- --------------------------------------------------------
 
@@ -49,31 +69,29 @@ INSERT INTO `info` (`username`, `password`) VALUES
 CREATE TABLE IF NOT EXISTS `postx` (
   `post_id` int(11) NOT NULL,
   `parent_id` int(11) NOT NULL,
-  `username` text NOT NULL,
-  `title` text NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `title` varchar(30) NOT NULL,
   `content` text NOT NULL,
   `time` time NOT NULL,
-  `date` date NOT NULL,
-  `likes` int(11) NOT NULL,
-  `dislikes` int(11) NOT NULL
+  `date` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `postx`
 --
 
-INSERT INTO `postx` (`post_id`, `parent_id`, `username`, `title`, `content`, `time`, `date`, `likes`, `dislikes`) VALUES
-(10, 9, 'x', 'reason', 'its very thrilling', '20:22:02', '2011-07-10', 1, 0),
-(9, 9, 'x', 'space', 'i like astronomy', '20:21:23', '2011-07-10', 1, 0),
-(8, 8, 's', 'sports', 'i like playing sports', '19:56:28', '2011-07-10', 0, 0),
-(7, 6, 'x', 'movie genre ', 'i like war movies the most', '19:55:09', '2011-07-10', 0, 0),
-(6, 6, 'x', 'movies', 'i love watching movies', '19:54:38', '2011-07-10', 1, 1),
-(5, 3, 'x', 'music', 'i like to listen to music too', '19:53:56', '2011-07-10', 1, 0),
-(4, 1, 'x', 'which game?', 'which game you like the most?', '19:53:15', '2011-07-10', 0, 0),
-(3, 3, 'x', 'books', 'i like to read books', '19:52:19', '2011-07-10', 0, 0),
-(2, 1, 's', 'type of games', 'i like all type of games', '19:51:25', '2011-07-10', 0, 1),
-(1, 1, 's', 'games', 'i like games', '19:50:37', '2011-07-10', 1, 0),
-(11, 9, 'x', 'boring', 'sometimes its boring too', '16:44:53', '2011-07-13', 0, 0);
+INSERT INTO `postx` (`post_id`, `parent_id`, `username`, `title`, `content`, `time`, `date`) VALUES
+(10, 9, 'x', 'reason', 'its very thrilling', '20:22:02', '2011-07-10'),
+(9, 9, 'x', 'space', 'i like astronomy', '20:21:23', '2011-07-10'),
+(8, 8, 's', 'sports', 'i like playing sports', '19:56:28', '2011-07-10'),
+(7, 6, 'x', 'movie genre ', 'i like war movies the most', '19:55:09', '2011-07-10'),
+(6, 6, 'x', 'movies', 'i love watching movies', '19:54:38', '2011-07-10'),
+(5, 3, 'x', 'music', 'i like to listen to music too', '19:53:56', '2011-07-10'),
+(4, 1, 'x', 'which game?', 'which game you like the most?', '19:53:15', '2011-07-10'),
+(3, 3, 'x', 'books', 'i like to read books', '19:52:19', '2011-07-10'),
+(2, 1, 's', 'type of games', 'i like all type of games', '19:51:25', '2011-07-10'),
+(1, 1, 's', 'games', 'i like games', '19:50:37', '2011-07-10'),
+(11, 9, 'x', 'boring', 'sometimes its boring too', '16:44:53', '2011-07-13');
 
 -- --------------------------------------------------------
 
@@ -82,14 +100,14 @@ INSERT INTO `postx` (`post_id`, `parent_id`, `username`, `title`, `content`, `ti
 --
 
 CREATE TABLE IF NOT EXISTS `userx` (
-  `username` text NOT NULL,
-  `gender` varchar(20) NOT NULL,
-  `name` text NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `gender` varchar(6) NOT NULL,
+  `name` varchar(30) NOT NULL,
   `birthday` date NOT NULL,
-  `occupation` text NOT NULL,
+  `occupation` varchar(30) NOT NULL,
   `interest` text NOT NULL,
-  `location` text NOT NULL,
-  `email` text NOT NULL,
+  `location` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `picture` text NOT NULL,
   `joindate` date NOT NULL,
   `last` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -100,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `userx` (
 --
 
 INSERT INTO `userx` (`username`, `gender`, `name`, `birthday`, `occupation`, `interest`, `location`, `email`, `picture`, `joindate`, `last`) VALUES
-('x', 'male', 'kyo', '1992-07-14', 'student', 'i like manga', 'india', 'hui', 'tokyo-drift-rx-8[1].jpg', '2011-07-07', '2011-07-13 16:36:58'),
-('s', 'male', 'thiru', '1993-03-12', 'student', 'i like games', 'chennai', 'thiru@thiru.com', 'na.jpeg', '2011-07-07', '2011-07-12 23:10:38');
+('x', 'male', 'kyo', '1992-07-14', 'student', 'i like manga', 'india', 'hui@hui.com', 'tokyo-drift-rx-8[1].jpg', '2011-07-07', '2011-07-22 22:42:49'),
+('s', 'male', 'thiru', '1993-03-12', 'student', 'i like games', 'chennai', 'thiru@thiru.com', 'na.jpeg', '2011-07-07', '2011-07-22 19:13:00');
 
 -- --------------------------------------------------------
 
@@ -119,8 +137,5 @@ CREATE TABLE IF NOT EXISTS `viewx` (
 --
 
 INSERT INTO `viewx` (`parent_id`, `views`) VALUES
-(3, 8),
-(1, 55),
-(9, 18),
-(8, 10),
-(6, 4);
+(3, 12),
+(1, 67);
