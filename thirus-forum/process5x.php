@@ -6,7 +6,7 @@ mysql_select_db("thiru");
 $namex=$_FILES["file"]["name"];
 $usname=$_SESSION["usrx"];
 $filtype=$_FILES["file"]["type"];
-if(($filtype=="image/jpeg")||($filtype=="image/gif")||($filtype=="image/png"))
+if(($filtype=="image/jpeg")||($filtype=="image/gif")||($filtype=="image/png")||($filtype=="image/x-png")||($filtype=="image/pjpeg"))
 {
                if (($_FILES["file"]["size"]/1024) < 1024)
                   {
@@ -42,7 +42,7 @@ else
    $_SESSION["psizex"]="150";
 }
 
-header("location:prox.php?xf=".$usname)
+header("location:prox.php?xf=".$usname);
 
 
 ?> 
