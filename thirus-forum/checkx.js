@@ -24,17 +24,20 @@
                 var dat="titlex="+tix+"&contentx="+cox;
               if(fg==0)
                {
-                 $.ajax({
-                     url:"processx.php",
-                     data:dat,
-                    type:"POST",
-                    success:function(dax)
-                     { $("#tablex").append(dax);
+                 $.getJSON(
+                     "processx.php",
+                     dat,
+                    
+                    function(dax)
+                     { 
+                       var dax2="<tr><td width='60%' style='text-align:left;' ><a href='rex.php?xs="+ dax.parentid +"'>"+ dax.title +"</a><br><span style='font-size:77%'>"+dax.time1+" ,"+ dax.day +" by <a href='prox.php?xf="+ dax.author +"'>"+ dax.author +"</a></span></td><td style='text-align:right;font-size:70%;' width='20%' >"+dax.time2 +" ,"+ dax.day2 +"<br> by<a href='prox.php?xf="+ dax.author2 +"'> "+ dax.author2 +"</a></td><td>0</td><td >"+dax.re5+"</td></tr>";
+
+                    $("#tablex").append(dax2);
                      }
                      
 
 
-                   });
+                   );
                 }
 
 
@@ -61,18 +64,22 @@
                var cox=$("#cox").val();
                 var dat="titlex="+tix+"&contentx="+cox;
              if(fgd==0)
-              {   $.ajax({
-                     url:"process2x.php",
-                     data:dat,
-                    type:"POST",
-                    success:function(dax)
-                     { $("#inz").append(dax);
+              {   $.getJSON(
+                     "process2x.php",
+                     dat,
+                    
+                    function(dax)
+                     { 
+
+                            var dax2=" <div id='ipost'><table id='tablex2'>      <tr><td width='26%' valign='top'><h3> <a href='prox.php?xf=" +dax.author+"'>"+dax.author+"</a></h3><div id='picx' style='text-align:center;'>   <img src='"+dax.picture+"' height='100' width='120'> </div><div class='sd2'> <strong>no.posts : </strong>"+dax.posts+"<br><strong>joined : </strong>"+dax.joined+"<br><strong>last visit </strong>: "+dax.last+"</div>      </td><td valign='top'><span class='ix'>"+dax.title+"</span><span class='iy'>"+dax.time+" ,"+dax.day+"</span><div class='iz'><span onclick='zpost("+dax.postid+",100)' style='color:green;'>like</span> | <span onclick='zpost("+dax.postid+",500)' style='color:red;'>dislike</span></div><br><div id='za" +dax.postid+ "' class='zax'>0 likes 0 dislikes</div><hr>"+dax.content+"</td></tr></table>             </div> " ;
+                    
+                        $("#inz").append(dax2);
                      
                      }
                      
 
 
-                   }); }
+                   ); }
 
 
 

@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$title=$_POST["titlex"];
-$content=$_POST["contentx"];
+$title=$_REQUEST["titlex"];
+$content=$_REQUEST["contentx"];
 $author=$_SESSION["usrx"];
 $time=date("H:i:s");
 $day=date("Y-m-d");
@@ -51,7 +51,18 @@ $author2=$count2["username"];
 $sq9="INSERT INTO viewx VALUES('{$parentid}','0');";
 mysql_query($sq9,$con);
 
-echo " <tr><td width='60%' style='text-align:left;' ><a href='rex.php?xs=".$parentid."'>".$title."</a><br><span style='font-size:77%'>".substr($time,0,5)." ,".$day." by <a href='prox.php?xf=".$author."'>".$author."</a></span></td><td style='text-align:right;font-size:70%;' width='20%' >".substr($time2,0,5)." ,".$day2."<br> by<a href='prox.php?xf=".$author2."'> ".$author2."</a></td><td>0</td><td >".$re5."</td>
-</tr>";
+$ed= array(
+"parentid"=>$parentid,
+ "title"=>$title,
+  "time1"=>substr($time,0,5),
+   "time2"=>substr($time2,0,5),
+    "day"=>$day,
+    "day2"=>$day2,
+    "author"=>$author,
+    "author2"=>$author2,
+    "re5"=>$re5,
+   );
+echo (json_encode($ed));
+
 
 ?>
