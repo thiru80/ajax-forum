@@ -6,6 +6,61 @@
             <link href="styx.css" rel="stylesheet" type="text/css">
                  <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
                   <script type="text/javascript" src="checkx.js"></script>
+
+
+  <script type="text/javascript">
+           var qw=setInterval(pageajax,500);
+           function pageajax()
+            {  var datf=$("#thrid").text();
+               var datx7="dtas="+datf;
+               $.ajax({
+                  url:"process10x.php",
+                  data:datx7,
+                  type:"post",
+                  success:function(dsa){
+                      if($("#potot").text()!=dsa)
+                        {
+
+                         $.getJSON(
+                     "process11x.php",
+                      datx7,
+                    
+                    
+                    function(dax)
+                     { 
+                          var dax2=" <div id='ipost'><table id='tablex2'>      <tr><td width='26%' valign='top'><h3> <a href='prox.php?xf=" +dax.author+"'>"+dax.author+"</a></h3><div id='picx' style='text-align:center;'>   <img src='"+dax.picture+"' height='100' width='120'> </div><div class='sd2'> <strong>no.posts : </strong>"+dax.posts+"<br><strong>joined : </strong>"+dax.joined+"<br><strong>last visit </strong>: "+dax.last+"</div>      </td><td valign='top'><span class='ix'>"+dax.title+"</span><span class='iy'>"+dax.time+" ,"+dax.day+"</span><div class='iz'><span onclick='zpost("+dax.postid+",100)' style='color:green;'>like</span> | <span onclick='zpost("+dax.postid+",500)' style='color:red;'>dislike</span></div><br><div id='za" +dax.postid+ "' class='zax'>0 likes 0 dislikes</div><hr>"+dax.content+"</td></tr></table>             </div> " ;
+                    
+                        $("#inz").append(dax2);
+                     }
+                     
+
+
+                   );
+
+
+                        $("#potot").text(dsa);
+                        }
+    
+                 
+
+                      }
+                        
+                });
+                  
+                   
+                
+
+
+
+
+
+            }
+
+
+           </script>
+
+
+
 <?php
 
 session_start();
@@ -55,7 +110,7 @@ $xparent=$_GET["xs"];
                 <div id="r13" >
             <div id="h3" >
                          
-                  <div class="lt"> <?php echo "THREAD CODE ".$xparent  ?></div>
+                  <div class="lt"> <?php echo "THREAD CODE <span id='thrid'>".$xparent."</span>";  ?></div>
                 </div>
                
                 <div id="inx2"><div id="inz">
@@ -66,6 +121,10 @@ $xparent=$_GET["xs"];
               mysql_select_db("thiru");
               $sq7="SELECT * FROM postx WHERE parent_id='{$xparent}' ORDER BY post_id;";
               $re7=mysql_query($sq7,$conz);
+               $sw89="SELECT count(*) AS sumz FROM postx WHERE parent_id='{$xparent}';";
+            $rew1=mysql_query($sw89,$conz);
+           $sed=mysql_fetch_array($rew1);
+           $postno=$sed["sumz"];
              
               while($row=mysql_fetch_array($re7))
                {
@@ -173,7 +232,7 @@ $xparent=$_GET["xs"];
                    }
                   else
                       echo "<div id='ct1' ><a href='xlogin.php'>login</a> to reply</div>";
-
+                     echo "no.of posts in this thread <div id='potot'>".$postno."</div>";
 
   ?>
 

@@ -6,6 +6,52 @@
             <link href="styx.css" rel="stylesheet" type="text/css">
             <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
              <script type="text/javascript" src="checkx.js"></script>
+            <script type="text/javascript">
+           var qw=setInterval(pageajax,500);
+           function pageajax()
+            {
+               $.ajax({
+                  url:"process8x.php",
+                  success:function(dsa){
+                      if($("#thtot").text()!=dsa)
+                        {
+
+                         $.getJSON(
+                     "process9x.php",
+                    
+                    
+                    function(dax)
+                     { 
+                      var dax2="<tr><td width='60%' style='text-align:left;' ><a href='rex.php?xs="+ dax.parentid +"'>"+ dax.title +"</a><br><span style='font-size:77%'>"+dax.time1+" ,"+ dax.day +" by <a href='prox.php?xf="+ dax.author +"'>"+ dax.author +"</a></span></td><td style='text-align:right;font-size:70%;' width='20%' >"+dax.time2 +" ,"+ dax.day2 +"<br> by<a href='prox.php?xf="+ dax.author2 +"'> "+ dax.author2 +"</a></td><td>"+dax.views+"</td><td >"+dax.re5+"</td></tr>";
+
+                    $("#tablex").append(dax2);
+                     }
+                     
+
+
+                   );
+
+
+                        $("#thtot").text(dsa);
+                        }
+    
+                 
+
+                      }
+                        
+                });
+                  
+                   
+                
+
+
+
+
+
+            }
+
+
+           </script>
 <?php
 
 session_start();
@@ -60,8 +106,13 @@ session_start();
 
             $con2=mysql_connect("localhost","root","") or die(mysql_error());
             mysql_select_db("thiru");
+             $sw89="SELECT count(*) AS sumz FROM postx WHERE post_id=parent_id;";
+            $rew1=mysql_query($sw89,$con2);
+           $sed=mysql_fetch_array($rew1);
+           $threadno=$sed["sumz"];
             $sq5="SELECT * FROM postx WHERE post_id=parent_id ORDER BY parent_id;";
             $res1=mysql_query($sq5,$con2);
+            
             while($row=mysql_fetch_array($res1))
 {
                $parent1x=$row["parent_id"];
@@ -131,7 +182,7 @@ $views=$vs["views"];
                    }
                   else
                       echo "<div id='ct1'><a href='xlogin.php'>login</a> to start a thread</div>";
-
+                      echo "no.of threads <div id='thtot'>".$threadno."</div>";
 
                 ?>
 
@@ -276,7 +327,7 @@ $views=$vs["views"];
 
      </body>
   
-
+ 
 
 
 </html>
